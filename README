@@ -1,0 +1,31 @@
+Google Ajax Libraries
+=====================
+
+From http://code.google.com/apis/ajaxlibs/documentation/
+
+"The AJAX Libraries API is a content distribution network and loading 
+architecture for the most popular open source JavaScript libraries. 
+By using the Google AJAX API Loader's google.load() method, your 
+application has high speed, globaly available access to a growing list 
+of the most popular JavaScript open source libraries including:
+
+* jQuery
+* prototype
+* script.aculo.us
+* MooTools
+* dojo
+
+"The AJAX Libraries API takes the pain out of developing mashups in 
+JavaScript while using a collection of libraries. We take the pain 
+out of hosting the libraries, correctly setting cache headers, staying 
+up to date with the most recent bug fixes, etc."
+
+Example
+=======
+
+  <%= google_javascript_include_tag :jquery %>
+  <%= google_javascript_include_tag :prototype, :version => "1.2.6" %>
+  <%= google_javascript_include_tag :dojo, :version => "1.1.1", :uncompressed => true %>
+
+Copyright (c) 2008 Francesc Esplugas Marti released under the MIT license
+  
