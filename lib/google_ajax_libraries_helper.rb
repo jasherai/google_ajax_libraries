@@ -17,3 +17,5 @@ module GoogleAjaxLibraries
   end
 
 end
+
+ActionView::Base.send(:include, GoogleAjaxLibraries::Helper)
