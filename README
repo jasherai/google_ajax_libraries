@@ -23,8 +23,7 @@ up to date with the most recent bug fixes, etc."
 Example
 =======
 
-  <%= google_javascript_include_tag :jquery => { } %>
-  <%= google_javascript_include_tag :prototype => { :version => "1.2.6" } %>
-  <%= google_javascript_include_tag :prototype => { }, :dojo => { :version => "1.1.1", :uncompressed => true } %>
+  <%= google_javascript_include_tag :prototype, :scriptaculous %>
+  <%= google_javascript_include_tag [:prototype, "1.2.6"], :scriptaculous %>
 
 Copyright (c) 2008 Francesc Esplugas Marti released under the MIT license
