@@ -1,5 +1,4 @@
-Google Ajax Libraries
-=====================
+== Google Ajax Libraries
 
 From http://code.google.com/apis/ajaxlibs/documentation/
 
@@ -9,19 +8,18 @@ By using the Google AJAX API Loader's google.load() method, your
 application has high speed, globaly available access to a growing list 
 of the most popular JavaScript open source libraries including:
 
-* jQuery
-* prototype
-* script.aculo.us
-* MooTools
-* dojo
+- jQuery
+- prototype
+- script.aculo.us
+- MooTools
+- dojo
 
 "The AJAX Libraries API takes the pain out of developing mashups in 
 JavaScript while using a collection of libraries. We take the pain 
 out of hosting the libraries, correctly setting cache headers, staying 
 up to date with the most recent bug fixes, etc."
 
-Example
-=======
+== Example
 
   <%= google_javascript_include_tag :prototype, :scriptaculous %>
   <%= google_javascript_include_tag [:prototype, "1.2.6"], :scriptaculous %>
