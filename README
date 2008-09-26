@@ -20,7 +20,12 @@ out of hosting the libraries, correctly setting cache headers, staying
 up to date with the most recent bug fixes, etc."
 
 == Example
+  You can now pass in optional parameters (only :key is used at this time; for google maps api key)
+  <%= google_javascript_include_tag( {:jquery, [:prototype, "1.2.6"], :maps }, { :key => APP_GOOGLE_MAPS_KEY } ) %>
 
+== OLD Example 
+This notation will break on upgrade. Please alter accordingly.
+(i.e. send all scripts wrapped in the first hash)
   <%= google_javascript_include_tag :prototype, :scriptaculous %>
   <%= google_javascript_include_tag [:prototype, "1.2.6"], :scriptaculous %>
 
