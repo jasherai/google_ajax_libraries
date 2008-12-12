@@ -4,7 +4,8 @@ module GoogleAjaxLibraries
 
     def google_javascript_include_tag(scripts={}, opts={})
       key = opts[:key] || nil
-      ajax_libraries = *scripts.to_a
+      map_sensor = opts[:sensor] || false
+      ajax_libraries = scripts
       html = ""
       debug = false
       if debug
@@ -20,7 +21,11 @@ module GoogleAjaxLibraries
       html << "<script>\n"
       ajax_libraries.to_a.each do |al|
         begin
-          html << "  google.load(\"#{al[0]}\", \"#{al[1] || 1 }\", {uncompressed:#{al[2] || false }});\n"
+	  if al[0]='maps'
+            html << "  google.load(\"#{al[0]}\", \"#{al[1] || 1 }\", {\"other_params\" : \"sensor=#{map_sensor || false}\"});\n"
+	  else
+            html << "  google.load(\"#{al[0]}\", \"#{al[1] || 1 }\", {uncompressed:#{al[2] || false }});\n"
+          end	  
         rescue
           html << "  google.load(\"#{al}\", \"1\");\n"
         end
